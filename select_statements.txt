@@ -1,0 +1,17 @@
+---Select statements 
+
+
+select * from Employees
+
+select firstname from Employees
+
+select firstname,Salary from Employees
+
+select FirstName,LastName from Employees
+
+select EmployeeID,concat(firstname,' ',LastName) from Employees
+
+---Here we are providing thr Aliace name as full name.
+
+select EmployeeID,concat(firstname,' ',LastName) [Full Name] from Employees
+

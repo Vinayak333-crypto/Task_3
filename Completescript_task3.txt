@@ -1,0 +1,58 @@
+---Creting Table called Employees
+
+
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Department VARCHAR(50),
+    Salary DECIMAL(10, 2),
+    HireDate DATE
+)
+
+---Inserting the values into tables
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Department, Salary, HireDate)
+VALUES
+(1, 'Virat', 'Kohli', 'HR', 50000.00, '2020-01-15'),
+(2, 'Rohit', 'Sharma', 'Finance', 60000.00, '2019-03-23'),
+(3, 'Miller', 'David', 'IT', 75000.00, '2021-07-10'),
+(4, 'Vinay', 'Reddy', 'Marketing', 55000.00, '2018-09-30'),
+(5, 'Ganesh', 'Choudhari', 'IT', 70000.00, '2022-02-20');
+
+
+---Using the select statement
+
+select * from Employees
+
+select firstname from Employees
+
+select firstname,Salary from Employees
+
+---Using OR operator
+
+select * from Employees
+where Department = 'HR' OR Department = 'Finance'
+
+select * from Employees
+where (Department = 'HR' OR Department = 'Finance') and Salary = 60000
+
+----Using AND operator
+
+select * from Employees
+where LastName = 'Miller' and EmployeeID = 3
+
+select * from Employees
+where LastName = 'Miller' and EmployeeID = '3'
+
+---Using ORDER BY Clause
+
+select * from dbo.Employees
+order by Salary
+
+select * from dbo.Employees
+order by FirstName asc,Salary desc
+
+
+

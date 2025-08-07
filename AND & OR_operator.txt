@@ -1,0 +1,15 @@
+---Here we are using the AND operator.
+
+select * from Employees
+where LastName = 'Miller' and EmployeeID = 3
+
+select * from Employees
+where LastName = 'Miller' and EmployeeID = '3'
+
+---Here we are using the OR operator.
+
+select * from Employees
+where Department = 'HR' OR Department = 'Finance'
+
+select * from Employees
+where (Department = 'HR' OR Department = 'Finance') and Salary = 60000
